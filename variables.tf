@@ -25,3 +25,18 @@ variable "fs_type" {
   default = "ext4"
   type    = string
 }
+
+variable "mount_options" {
+  default = []
+  type    = list(string)
+}
+
+variable "persistent_volume_reclaim_policy" {
+  default = "Retain"
+  type    = string
+}
+
+variable "volume_mode" {
+  default = "Filesystem"
+  type    = string
+}

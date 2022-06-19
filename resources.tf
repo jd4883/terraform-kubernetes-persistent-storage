@@ -17,8 +17,11 @@ resource "vsphere_virtual_disk" "disk" {
 resource "kubernetes_persistent_volume" "pv" {
   metadata { name = var.name }
   spec {
-    access_modes = var.access_modes
-    capacity     = local.capacity
+    access_modes                     = var.access_modes
+    capacity                         = local.capacity
+    mount_options                    = var.mount_options
+    persistent_volume_reclaim_policy = var.persistent_volume_reclaim_policy
+    volume_mode                      = var.volume_mode
     persistent_volume_source {
       vsphere_volume {
         fs_type     = var.fs_type
