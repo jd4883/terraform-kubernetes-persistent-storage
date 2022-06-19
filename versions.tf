@@ -1,6 +1,7 @@
 terraform {
   required_providers {
-    local = { source = "hashicorp/local" }
     kubernetes = { source = "hashicorp/kubernetes" }
+    local      = { source = "hashicorp/local" }
+    vsphere    = { source = "hashicorp/vsphere" }
   }
 }
