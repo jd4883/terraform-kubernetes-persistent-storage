@@ -21,6 +21,7 @@ resource "kubernetes_persistent_volume" "pv" {
     capacity                         = local.capacity
     mount_options                    = var.mount_options
     persistent_volume_reclaim_policy = var.persistent_volume_reclaim_policy
+    storage_class_name               = var.storage_class_name
     volume_mode                      = var.volume_mode
     persistent_volume_source {
       vsphere_volume {
@@ -38,8 +39,9 @@ resource "kubernetes_persistent_volume_claim" "pvc" {
     namespace = each.value
   }
   spec {
-    access_modes = kubernetes_persistent_volume.pv.spec.0.access_modes
-    volume_name  = kubernetes_persistent_volume.pv.metadata.0.name
+    access_modes       = kubernetes_persistent_volume.pv.spec.0.access_modes
+    storage_class_name = var.storage_class_name
+    volume_name        = kubernetes_persistent_volume.pv.metadata.0.name
     resources { requests = kubernetes_persistent_volume.pv.spec.0.capacity }
   }
 }

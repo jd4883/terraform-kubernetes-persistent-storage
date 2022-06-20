@@ -3,6 +3,7 @@ variable "datastore" { type = string }
 variable "name" { type = string }
 variable "namespaces" { type = list(string) }
 variable "size" { type = number }
+variable "storage_class_name" { type = string }
 variable "vmdk_name" { type = string }
 variable "vmdk_path" { type = string }
 
