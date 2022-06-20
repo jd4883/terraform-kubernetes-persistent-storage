@@ -39,6 +39,7 @@ resource "kubernetes_persistent_volume_claim" "pvc" {
   }
   spec {
     access_modes = kubernetes_persistent_volume.pv.spec.0.access_modes
+    volume_name  = kubernetes_persistent_volume.pv.metadata.0.name
     resources { requests = kubernetes_persistent_volume.pv.spec.0.capacity }
   }
 }
