@@ -24,7 +24,7 @@ resource "kubernetes_persistent_volume" "pv" {
     storage_class_name               = var.storage_class_name
     volume_mode                      = var.volume_mode
     persistent_volume_source {
-      csi {
+      vsphere_volume {
         fs_type     = var.fs_type
         volume_path = local.vsphere_volume_path
       }
