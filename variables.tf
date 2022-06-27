@@ -6,6 +6,12 @@ variable "size" { type = number }
 variable "storage_class_name" { type = string }
 variable "vmdk_name" { type = string }
 variable "vmdk_path" { type = string }
+variable "volume_name" { type = string }
+
+variable "volume_handle" {
+  default = null
+  type = string
+}
 
 variable "create_directories" {
   default = true
