@@ -10,7 +10,7 @@ variable "volume_name" { type = string }
 
 variable "volume_handle" {
   default = null
-  type = string
+  type    = string
 }
 
 variable "create_directories" {
