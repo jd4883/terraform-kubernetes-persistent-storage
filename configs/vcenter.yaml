@@ -1,0 +1,28 @@
+vcenter:
+  cnames:
+    - vcenter
+    - vcenter-1
+    - vsphere
+    - vsphere-1
+  datacenter: home
+  datastore_clusters:
+    - name: HDD
+      sdrs_automation_level: automated
+      sdrs_default_intra_vm_affinity: false
+      sdrs_enabled: true
+    - name: SSD
+      sdrs_automation_level: automated
+      sdrs_default_intra_vm_affinity: false
+      sdrs_enabled: true
+    - name: USB
+      sdrs_automation_level: automated
+      sdrs_default_intra_vm_affinity: false
+      sdrs_enabled: true
+  host_clusters:
+    - drs_advanced_options:
+        TryBalanceVmsPerHost: 1
+      ha_host_monitoring: "disabled"
+      name: Tanzu K8s
+  hostname: vcenter-01
+  ip: 172.16.11.198
+  lastpass: vCenter

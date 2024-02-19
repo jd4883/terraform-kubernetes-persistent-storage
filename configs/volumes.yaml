@@ -1,0 +1,375 @@
+persistent_volumes:
+  ## BAZARR
+  - name: bazarr-config
+    datastore: MD1220
+    namespaces: [bazarr]
+    size: 2Gi
+    storage_class: ssd
+    vmdk_name: 5bdb03a17995406aa9f45deaf3716da0
+    vmdk_path: fcd
+    volume_handle: 4f9ea463-eefe-42ef-bae9-c062aada13b6-e886341c-5f7d-4d16-8b7c-acda53a46126
+    volume_name: pvc-e886341c-5f7d-4d16-8b7c-acda53a46126
+  ## PLEX-LINKER
+  - name: plex-linker-config
+    namespaces: [plex-linker]
+    datastore: MD1220
+    size: 1Gi
+    storage_class: ssd
+    vmdk_name: 2d1b9f9ed7ff4c48958d2d987548f28c
+    vmdk_path: fcd
+    volume_name: pvc-bebafa50-6ac0-4be2-8553-071dc0e821c2
+    volume_handle: 4f9ea463-eefe-42ef-bae9-c062aada13b6-bebafa50-6ac0-4be2-8553-071dc0e821c2
+  ## PROWLARR
+  - name: prowlarr-config
+    datastore: MD1220
+    namespaces: [prowlarr]
+    size: 10Gi
+    storage_class: ssd
+    vmdk_name: 14593162897f403d80161d2bbd381272
+    vmdk_path: fcd
+    volume_handle: 4f9ea463-eefe-42ef-bae9-c062aada13b6-93b69724-d3ac-4cd9-87ea-ae155849b2a6
+    volume_name: pvc-93b69724-d3ac-4cd9-87ea-ae155849b2a6
+  ## GAPS
+  - name: gaps-data
+    datastore: MD1220
+    namespaces: [gaps]
+    size: 2Gi
+    storage_class: ssd
+    vmdk_name: aacf02ec9b614b26a9b32d8c2d47bb28
+    vmdk_path: fcd
+    volume_handle: 4f9ea463-eefe-42ef-bae9-c062aada13b6-019644a4-e95d-4698-bb9a-53a0df88d593
+    volume_name: pvc-019644a4-e95d-4698-bb9a-53a0df88d593
+  ## NZBGET
+  - name: nzbget-config
+    datastore: MD1220
+    namespaces: [nzbget]
+    size: 1Gi
+    storage_class: ssd
+    vmdk_name: c8bb742db5944a3eac0164740aee3f7e
+    vmdk_path: fcd
+    volume_name: pvc-5751468a-025a-48a1-b194-e55fd3cfb664
+    volume_handle: 4f9ea463-eefe-42ef-bae9-c062aada13b6-5751468a-025a-48a1-b194-e55fd3cfb664
+  ## ORGANIZR
+  - name: organizr-config
+    datastore: MD1220
+    namespaces: [organizr]
+    size: 1Gi
+    storage_class: ssd
+    vmdk_name: ca19e01025c244a0bf71d63446654555
+    vmdk_path: fcd
+    volume_name: pvc-f249a925-026a-44cb-93ac-9210f3b9ee8d
+    volume_handle: 4f9ea463-eefe-42ef-bae9-c062aada13b6-f249a925-026a-44cb-93ac-9210f3b9ee8d
+  ## PORTAINER
+  - name: portainer
+    datastore: MD1220
+    size: 1Gi
+    storage_class: ssd
+    vmdk_name: 8a2634fb8c944cc2948debfc4f7ccf16
+    vmdk_path: fcd/_00be
+    volume_name: pvc-c4494c16-8a71-4007-8101-5c57fe144c09
+    volume_handle: 4f9ea463-eefe-42ef-bae9-c062aada13b6-c4494c16-8a71-4007-8101-5c57fe144c09
+  ## TAUTULLI
+  - name: tautulli-config
+    datastore: MD1220
+    namespaces: [tautulli]
+    size: 1Gi
+    storage_class: ssd
+    vmdk_name: 0738a042c66c4656ba285563c2fa8357
+    vmdk_path: fcd
+    volume_name: pvc-fcf2e5c4-e882-4eb1-b6cc-89ce5fc45de3
+    volume_handle: 4f9ea463-eefe-42ef-bae9-c062aada13b6-fcf2e5c4-e882-4eb1-b6cc-89ce5fc45de3
+  ## KOMGA
+  - name: komga-config
+    datastore: MD1220
+    namespaces: [komga]
+    size: 1Gi
+    storage_class: ssd
+    vmdk_name: e02210705f2d41aa83d11e3086b18424
+    vmdk_path: fcd
+    volume_name: pvc-f494f4b4-8483-4a78-a75e-64908458c177
+    volume_handle: 4f9ea463-eefe-42ef-bae9-c062aada13b6-f494f4b4-8483-4a78-a75e-64908458c177
+  ## OMBI
+  - name: ombi-config
+    datastore: MD1220
+    namespaces: [ombi]
+    size: 2Gi
+    storage_class: ssd
+    vmdk_name: 1cb9d2a3c7944d56a6f0466a2ccb1a4b
+    vmdk_path: fcd
+    volume_name: pvc-de128ac6-aa9b-4629-b5a7-73b57186ae00
+    volume_handle: 4f9ea463-eefe-42ef-bae9-c062aada13b6-de128ac6-aa9b-4629-b5a7-73b57186ae00
+  ## HOME-ASSISTANT
+  - name: home-assistant-config
+    datastore: MD1220
+    namespaces: [home-assistant]
+    size: 1Gi
+    storage_class: ssd
+    vmdk_name: 7c82166fd42f465ebbc44277eab26e08
+    vmdk_path: fcd
+    volume_name: pvc-c703acaf-0d1b-4218-917d-6985ade30660
+    volume_handle: 4f9ea463-eefe-42ef-bae9-c062aada13b6-c703acaf-0d1b-4218-917d-6985ade30660
+  ## MYLAR
+  - name: mylar-config
+    datastore: MD1220
+    namespaces: [mylar]
+    size: 10Gi
+    storage_class: ssd
+    vmdk_name: 92112edf5991470eb56601ce1a584faf
+    vmdk_path: fcd
+    volume_name: pvc-47a18fdd-e4a6-49f1-8da7-737ffb5deef2
+    volume_handle: 4f9ea463-eefe-42ef-bae9-c062aada13b6-47a18fdd-e4a6-49f1-8da7-737ffb5deef2
+  ## RADARR
+  - name: radarr-config
+    datastore: MD1220
+    namespaces: [radarr]
+    size: 15Gi
+    storage_class: ssd
+    vmdk_name: 4d5ad2b9d40e4170ba8f7c63a854b689
+    vmdk_path: fcd
+    volume_handle: 4f9ea463-eefe-42ef-bae9-c062aada13b6-7f743904-cefb-4a4c-97c1-16655a7a9e8c
+    volume_name: pvc-7f743904-cefb-4a4c-97c1-16655a7a9e8c 
+  ## READARR
+  - name: readarr-config
+    datastore: MD1220
+    namespaces: [readarr]
+    size: 10Gi
+    storage_class: ssd
+    vmdk_name: 08f2aa31b45349a39bce5e5033971190
+    vmdk_path: fcd
+    volume_name: pvc-47faa366-1f37-46b0-9926-ab8bf8ae17c3
+    volume_handle: 4f9ea463-eefe-42ef-bae9-c062aada13b6-47faa366-1f37-46b0-9926-ab8bf8ae17c3
+  ## CALIBRE
+  - name: calibre-config
+    datastore: MD1220
+    namespaces: [calibre]
+    size: 2Gi
+    storage_class: ssd
+    vmdk_name: 6be96cfcc2fa457a916a7148498077fb
+    vmdk_path: fcd
+    volume_handle: 4f9ea463-eefe-42ef-bae9-c062aada13b6-14be0b88-773c-471b-bf85-f4a1c1b9e4ea
+    volume_name: pvc-14be0b88-773c-471b-bf85-f4a1c1b9e4ea
+  - name: calibre-epub
+    access_modes: [ReadWriteMany]
+    namespaces: [calibre]
+    size: 25Gi
+    path: /mnt/media/books/epub
+  - name: calibre-magazines
+    access_modes: [ReadWriteMany]
+    namespaces: [calibre]
+    size: 25Gi
+    path: /mnt/media/books/magazines
+  - name: calibre-pdf
+    access_modes: [ReadWriteMany]
+    namespaces: [calibre]
+    size: 100Gi
+    path: /mnt/media/books/pdf
+  ## CALIBRE-WEB
+  - name: calibre-web-config
+    datastore: MD1220
+    namespaces: [calibre]
+    size: 1Gi
+    storage_class: ssd
+    vmdk_name: defdd68ec82041e2850b119e395906c9
+    vmdk_path: fcd
+    volume_handle: 4f9ea463-eefe-42ef-bae9-c062aada13b6-3d1a9e45-3883-408c-a50d-132ab51b8256
+    volume_name: pvc-3d1a9e45-3883-408c-a50d-132ab51b8256
+  - name: calibre-web-epub
+    access_modes: [ReadWriteMany]
+    namespaces: [calibre]
+    size: 25Gi
+    path: /mnt/media/books/epub
+  - name: calibre-web-magazines
+    access_modes: [ReadWriteMany]
+    namespaces: [calibre]
+    size: 25Gi
+    path: /mnt/media/books/magazines
+  - name: calibre-web-pdf
+    access_modes: [ReadWriteMany]
+    namespaces: [calibre]
+    size: 100Gi
+    path: /mnt/media/books/pdf
+  ## SABNZBD
+  - name: sabnzbd-config
+    datastore: MD1220
+    namespaces: [sabnzbd]
+    size: 1Gi
+    storage_class: ssd
+    vmdk_name: 5113c88e057d4bd4b6cad341d1681ceb
+    vmdk_path: fcd
+    volume_handle: 4f9ea463-eefe-42ef-bae9-c062aada13b6-e47bf651-8e85-4705-9f6c-b88f74a6e18e
+    volume_name:  pvc-6bc114c9-9f02-4069-9fe9-f3ae5f08c907
+  - name: sabnzbd-downloads
+    access_modes: [ReadWriteMany]
+    namespaces: [sabnzbd]
+    size: 7680Gi
+    path: /mnt/downloads
+  ## RTORRENT
+  - name: rtorrent-rtorrent-rutorrent-data
+    datastore: MD1220
+    namespaces: [rtorrent]
+    size: 10Gi
+    storage_class: ssd
+    vmdk_name: bfd47326ffb542c787c05e9bf6e0e8cd
+    vmdk_path: fcd/_00be
+    volume_handle: 4f9ea463-eefe-42ef-bae9-c062aada13b6-06237c9c-6c95-4889-918c-93000550a1ee
+    volume_name: pvc-06237c9c-6c95-4889-918c-93000550a1ee
+  - name: rtorrent-downloads
+    access_modes: [ReadWriteMany]
+    namespaces: [rtorrent]
+    size: 7680Gi
+    path: /mnt/downloads
+  ## QBITTORRENT
+  - name: qbittorrent-public-config
+    datastore: MD1220
+    namespaces: [qbittorrent]
+    size: 1Gi
+    storage_class: ssd
+    vmdk_name: 6954a70f81b340ccbb7e9c7981b775bd
+    vmdk_path: fcd
+    volume_handle: 4f9ea463-eefe-42ef-bae9-c062aada13b6-1211f66c-5f5d-4265-89d0-ef5a64dd83c1
+    volume_name: pvc-e4ab4c91-4f04-4928-9912-e202ecc02183
+  - name: qbittorrent-downloads
+    access_modes: [ReadWriteMany]
+    namespaces: [qbittorrent]
+    size: 7680Gi
+    path: /mnt/downloads
+  ## LIDARR
+  - name: lidarr-config
+    datastore: MD1220
+    namespaces: [lidarr]
+    size: 100Gi
+    storage_class: ssd
+    vmdk_name: 78ca42a093cb469d9e4a46e69a470c7c
+    vmdk_path: fcd
+    volume_handle: 4f9ea463-eefe-42ef-bae9-c062aada13b6-d71614a6-52f3-4b49-8845-20ddb2737765
+    volume_name: pvc-d71614a6-52f3-4b49-8845-20ddb2737765
+  - name: lidarr-downloads
+    access_modes: [ReadWriteMany]
+    namespaces: [lidarr]
+    size: 7680Gi
+    path: /mnt/downloads
+  - name: lidarr-music-staging
+    access_modes: [ReadWriteMany]
+    namespaces: [lidarr]
+    size: 10240Gi
+    path: /mnt/media/audio/music/staging
+  ## POSTGRESQL
+  - name: postgresql-data
+    datastore: MD1220
+    namespaces: [postgresql]
+    size: 200Gi
+    storage_class: ssd
+    vmdk_name: dc698709c0d147f0a77a05cf439ad9e6
+    vmdk_path: fcd
+    volume_handle: 4f9ea463-eefe-42ef-bae9-c062aada13b6-8cccf536-0dbe-4e6a-85de-94b32557c1ac
+    volume_name: pvc-6086adc2-ffbe-40af-9409-40112b24c93c
+  - name: postgresql-backup
+    datastore: MD1200 Temp
+    namespaces: [postgresql]
+    size: 400Gi
+    storage_class: ssd
+    vmdk_name: 0f31194406074da0b03b884fb26cf112
+    vmdk_path: fcd
+    volume_handle: 4f9ea463-eefe-42ef-bae9-c062aada13b6-02b5a610-f5c3-4acb-8e23-1875578e6322
+    volume_name: pvc-d4f76b53-7c3b-45d1-be08-285bbae5e6d3
+  ## SONARR
+  - name: sonarr-config
+    datastore: MD1220
+    namespaces: [sonarr]
+    size: 15Gi
+    storage_class: ssd
+    vmdk_name: 4f123b7484e347a98fa1935246018855
+    vmdk_path: fcd/_00ec
+    volume_handle: 4f9ea463-eefe-42ef-bae9-c062aada13b6-4eed247e-2daa-4cb0-9e0f-83d43a2e76bf
+    volume_name: pvc-4eed247e-2daa-4cb0-9e0f-83d43a2e76bf
+  - name: sonarr-downloads
+    access_modes: [ReadWriteMany]
+    namespaces: [sonarr]
+    size: 7680Gi
+    path: /mnt/downloads
+  ## PLEX
+  - name: plex-config
+    datastore: MD1220
+    namespaces: [plex]
+    size: 350Gi
+    storage_class: ssd
+    vmdk_name: 6d7b2134d3bc4cad9eb601532db04d97
+    vmdk_path: fcd/_00be
+    volume_name:  pvc-7b2f42e0-492b-4c4e-98e5-72372489e936
+    volume_handle: 4f9ea463-eefe-42ef-bae9-c062aada13b6-7b2f42e0-492b-4c4e-98e5-72372489e936
+  - name: media
+    access_modes: [ReadWriteMany]
+    namespaces: [plex]
+    size: 131337Gi
+    path: /mnt/media
+
+  # - name: harbor-registry
+  #   access_modes: [ReadWriteOnce]
+  #   datastore: MD1220
+  #   size: 5Gi
+  #   storage_class: ssd
+  #   vmdk_name: de280cae5bd842638563472bbc6ff35d
+  #   vmdk_path: fcd
+  #   volume_name: harbor-registry
+  #   namespaces: [harbor]
+  #   volume_handle: a549c3d2-f4ff-45f3-a521-b0fb7c513679-fcadce82-478d-4068-bca9-593d8f139670
+  # - name: harbor-jobservice
+  #   access_modes: [ReadWriteOnce]
+  #   datastore: MD1220
+  #   size: 1Gi
+  #   storage_class: ssd
+  #   vmdk_name: 75c4e98a33e5440cb5dacd5ea23416f1
+  #   vmdk_path: fcd
+  #   volume_name: harbor-jobservice
+  #   namespaces: [harbor]
+  #   volume_handle: a549c3d2-f4ff-45f3-a521-b0fb7c513679-2c6d1a41-8bb6-4d99-93db-7cdef92b56c2
+  # - name: harbor-chartmuseum
+  #   access_modes: [ReadWriteOnce]
+  #   datastore: MD1220
+  #   size: 5Gi
+  #   storage_class: ssd
+  #   vmdk_name: a193e18fc37a4a389d3501e51d6060ae
+  #   vmdk_path: fcd
+  #   volume_name: harbor-chartmuseum
+  #   namespaces: [harbor]
+  #   volume_handle: a549c3d2-f4ff-45f3-a521-b0fb7c513679-9f4d73c0-b2cc-46d9-b10b-d482332b93ba
+  # - name: harbor-trivy
+  #   access_modes: [ReadWriteOnce]
+  #   datastore: MD1220
+  #   size: 5Gi
+  #   storage_class: ssd
+  #   vmdk_name: 85708fb9236c4c238f99bb9cfe921e8e
+  #   vmdk_path: fcd
+  #   volume_name: harbor-trivy
+  #   namespaces: [harbor]
+  #   volume_handle: a549c3d2-f4ff-45f3-a521-b0fb7c513679-c2308872-fb7f-441e-96f0-0d019e44e80b
+  # - name: harbor-database
+  #   access_modes: [ReadWriteOnce]
+  #   datastore: MD1220
+  #   size: 1Gi
+  #   storage_class: ssd
+  #   vmdk_name: 87a74da5bc4b4d20bb5e9f3aa7b518a2
+  #   vmdk_path: fcd
+  #   volume_name: harbor-database
+  #   namespaces: [harbor]
+  #   volume_handle: a549c3d2-f4ff-45f3-a521-b0fb7c513679-66c7912c-a80d-45a6-9e93-e2d5f5a367c4
+  # - name: harbor-redis
+  #   access_modes: [ReadWriteOnce]
+  #   datastore: MD1220
+  #   size: 1Gi
+  #   storage_class: ssd
+  #   vmdk_name: ef7f49dccc9040f690b64283f3c382aa
+  #   vmdk_path: fcd
+  #   volume_name: harbor-redis
+  #   namespaces: [harbor]
+  #   volume_handle: a549c3d2-f4ff-45f3-a521-b0fb7c513679-b3fa144a-9259-4c49-ac01-84b3c9474ae2
+  # - name: nextcloud-mariadb
+  #   access_modes: [ReadWriteOnce]
+  #   datastore: MD1220
+  #   namespaces: [nextcloud]
+  #   size: 20Gi
+  #   storage_class: ssd
+  #   vmdk_name: 5417cfae0bb544b8a2df1a3571bcbc2e
+  #   vmdk_path: fcd
+  #   volume_handle: a549c3d2-f4ff-45f3-a521-b0fb7c513679-389414f2-3188-4d89-ae56-c1cc1d8e204b
+  #   volume_name: nextcloud-mariadb
